@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function PolicyLayout({
@@ -15,27 +16,12 @@ export default function PolicyLayout({
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5">
-            <svg width="34" height="34" viewBox="0 0 120 120" fill="none">
-              <circle
-                cx="60"
-                cy="60"
-                r="54"
-                stroke="#EC1D8D"
-                strokeWidth="9"
-                fill="none"
-              />
-              <path
-                d="M60 28C38 28 22 44 22 60s16 32 38 32 38-16 38-32c0-9-4.5-17-12-22"
-                stroke="#EC1D8D"
-                strokeWidth="9"
-                strokeLinecap="round"
-                fill="none"
-              />
-              <ellipse cx="55" cy="62" rx="11" ry="8" fill="#EC1D8D" />
-            </svg>
-            <span className="font-light text-sm text-[#2B2B2B]">
-              Book My <strong className="font-black">Services</strong>
-            </span>
+            <Image
+              src={"/logo2.png"}
+              width={150}
+              height={40}
+              alt="Book My Services Logo"
+            />
           </Link>
           <Link
             href="/"
