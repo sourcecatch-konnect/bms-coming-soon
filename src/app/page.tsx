@@ -135,37 +135,9 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-gray-500 text-lg leading-relaxed max-w-xl mx-auto">
-            Book trusted, vetted professionals across London — cleaning,
-            plumbing, beauty, electrical and more, all from one simple platform.
+            Book trusted, vetted professionals for cleaning across London from
+            one simple platform.
           </p>
-        </div>
-
-        {/* Service chips */}
-        <div className="animate-fade-up-5 mb-12 w-full max-w-2xl">
-          <p className="text-center text-[11px] font-semibold tracking-[.2em] uppercase text-gray-400 mb-3">
-            Services we cover
-          </p>
-          <div className="flex flex-wrap gap-2 justify-center">
-            {services.map(({ icon, label }) => (
-              <span
-                key={label}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium bg-white border transition-all hover:border-[#EC1D8D] hover:text-[#EC1D8D] cursor-default"
-                style={{ borderColor: "rgba(43,43,43,.12)", color: "#2B2B2B" }}
-              >
-                {icon} {label}
-              </span>
-            ))}
-            <span
-              className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium"
-              style={{
-                background: "rgba(236,29,141,.06)",
-                color: "#EC1D8D",
-                border: "1px dashed rgba(236,29,141,.3)",
-              }}
-            >
-              + many more
-            </span>
-          </div>
         </div>
 
         {/* Trust row */}
