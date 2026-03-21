@@ -64,6 +64,199 @@ body {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
+.lead-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .lead-grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
+  }
+}
+
+.lead-card {
+  position: relative;
+  border-radius: 28px;
+  border: 1px solid rgba(236, 29, 141, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92)),
+    linear-gradient(135deg, rgba(236, 29, 141, 0.08), rgba(255, 255, 255, 0));
+  padding: 1.5rem;
+  box-shadow: 0 24px 80px rgba(43, 43, 43, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.lead-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.42),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.lead-card-primary {
+  padding: 1.75rem;
+}
+
+.lead-card-secondary {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(249, 250, 251, 0.95)),
+    linear-gradient(135deg, rgba(236, 29, 141, 0.04), rgba(255, 255, 255, 0));
+}
+
+@media (min-width: 640px) {
+  .lead-card {
+    padding: 2rem;
+  }
+
+  .lead-card-primary {
+    padding: 2.25rem;
+  }
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.form-control {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(43, 43, 43, 0.1);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.95rem 1rem;
+  font-size: 0.95rem;
+  color: var(--dark);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+.form-control:hover {
+  border-color: rgba(236, 29, 141, 0.22);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: rgba(236, 29, 141, 0.55);
+  box-shadow:
+    0 0 0 4px rgba(236, 29, 141, 0.12),
+    0 12px 24px rgba(236, 29, 141, 0.08);
+  transform: translateY(-1px);
+}
+
+.form-control[aria-invalid="true"] {
+  border-color: rgba(220, 38, 38, 0.35);
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.08);
+}
+
+.form-select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #6b7280 50%),
+    linear-gradient(135deg, #6b7280 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) calc(50% - 2px),
+    calc(100% - 16px) calc(50% - 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 3rem;
+}
+
+.form-textarea {
+  min-height: 10.5rem;
+  resize: vertical;
+}
+
+.form-error {
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #dc2626;
+}
+
+.form-success {
+  margin-bottom: 1.25rem;
+  border-radius: 18px;
+  border: 1px solid rgba(22, 163, 74, 0.18);
+  background: rgba(22, 163, 74, 0.08);
+  padding: 0.95rem 1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #166534;
+}
+
+.checkbox-row {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.checkbox-row input {
+  margin-top: 0.2rem;
+  height: 1rem;
+  width: 1rem;
+  accent-color: var(--pink);
+  flex-shrink: 0;
+}
+
+.primary-button,
+.secondary-button {
+  width: 100%;
+  border-radius: 999px;
+  padding: 0.95rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #ec1d8d, #ff6db8);
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(236, 29, 141, 0.28);
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 44px rgba(236, 29, 141, 0.32);
+}
+
+.secondary-button {
+  background: #fff;
+  color: var(--dark);
+  border: 1px solid rgba(43, 43, 43, 0.12);
+  box-shadow: 0 14px 32px rgba(43, 43, 43, 0.08);
+}
+
+.secondary-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(236, 29, 141, 0.22);
+  color: var(--pink);
+}
+
 /* Policy prose */
 .prose-policy h2 {
   font-size: 1.15rem;
