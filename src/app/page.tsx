@@ -263,6 +263,19 @@ export default function Home() {
           </p>
         </div>
 
+        <div className="animate-fade-up-4 mb-10 flex flex-col items-center gap-3 text-center">
+          <Link
+            href="/cleaner-onboarding"
+            className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#ec1d8d,#ff6db8)] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(236,29,141,0.28)] transition-all hover:-translate-y-0.5 hover:shadow-[0_22px_44px_rgba(236,29,141,0.32)]"
+          >
+            Cleaner Onboarding
+          </Link>
+          <p className="text-sm text-gray-400">
+            Are you a cleaner? Share your details and start earning as a
+            cleaner.
+          </p>
+        </div>
+
         <div className="animate-fade-up-5 mb-14 flex flex-wrap gap-6 justify-center">
           {trustPoints.map((point) => (
             <div key={point} className="flex items-center gap-2">
