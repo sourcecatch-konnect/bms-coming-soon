@@ -22,7 +22,10 @@ export async function POST(request: Request) {
     );
   }
 
-  const candidate = body as Partial<CleanerOnboardingFormData> | null;
+  const candidate = body as Partial<CleanerOnboardingFormData> & {
+    description?: string;
+    services?: string[];
+  } | null;
 
   const sanitized = sanitizeCleanerOnboardingForm({
     fullName: candidate?.fullName ?? "",
@@ -31,6 +34,13 @@ export async function POST(request: Request) {
     city: candidate?.city ?? "London",
     postcode: candidate?.postcode ?? "",
   });
+  const description = typeof candidate?.description === "string"
+    ? candidate.description.trim()
+    : "";
+
+  const services = Array.isArray(candidate?.services)
+    ? candidate.services.filter((s) => typeof s === "string")
+    : [];
 
   const errors = validateCleanerOnboardingForm(sanitized);
 
@@ -45,7 +55,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    await appendCleanerOnboardingRow(sanitized);
+    await appendCleanerOnboardingRow(sanitized, description, services);
     await sendCleanerThankYouEmail(sanitized);
 
     return NextResponse.json({

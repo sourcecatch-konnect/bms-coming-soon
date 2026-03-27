@@ -6,7 +6,7 @@ import { CleanerArt } from "@/components/CleanerArt";
 import { CleanerOnboardingForm } from "@/components/CleanerOnboardingForm";
 
 export const metadata: Metadata = {
-  title: "Cleaner Onboarding | Book My Services",
+  title: "Service Provider Onboarding | Book My Services",
   description:
     "Join Book My Services as a cleaner and share your details for London onboarding.",
 };
@@ -34,10 +34,10 @@ export default function CleanerOnboardingPage() {
 
           <div className="mb-8 space-y-2">
             <p className="text-xs font-semibold uppercase tracking-widest text-[#EC1D8D]">
-              Cleaner onboarding
+              Service Provider onboarding
             </p>
             <h1 className="text-3xl font-black leading-tight text-[#2B2B2B] sm:text-4xl">
-              Join London’s <br /> Trusted Cleaning Network
+              Join London’s <br /> Trusted Service Network
             </h1>
             <p className="pt-1 text-sm leading-6 text-neutral-400">
               Fill in your details and we&apos;ll be in touch shortly.

@@ -258,7 +258,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-gray-500 text-lg leading-relaxed max-w-xl mx-auto">
-            Book trusted, vetted professionals for cleaning across London from
+            Book trusted, vetted professionals offering services across London from
             one simple platform.
           </p>
         </div>
@@ -268,11 +268,11 @@ export default function Home() {
             href="/cleaner-onboarding"
             className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#ec1d8d,#ff6db8)] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(236,29,141,0.28)] transition-all hover:-translate-y-0.5 hover:shadow-[0_22px_44px_rgba(236,29,141,0.32)]"
           >
-            Cleaner Onboarding
+            Service Provider Onboarding
           </Link>
           <p className="text-sm text-gray-400">
-            Are you a cleaner? Share your details and start earning as a
-            cleaner.
+            Are you a Service Provider? Share your details and start earning as a
+            professional.
           </p>
         </div>
 

@@ -40,6 +40,8 @@ function loadGoogleServiceAccount(): GoogleServiceAccount {
 
 export async function appendCleanerOnboardingRow(
   submission: CleanerOnboardingFormData,
+  description: string,
+  services: string[],
 ) {
   const credentials = loadGoogleServiceAccount();
   const auth = new google.auth.GoogleAuth({
@@ -53,7 +55,7 @@ export async function appendCleanerOnboardingRow(
 
   await sheets.spreadsheets.values.append({
     spreadsheetId,
-    range: `${sheetName}!A:F`,
+    range: `${sheetName}!A:H`,
     valueInputOption: "USER_ENTERED",
     requestBody: {
       values: [
@@ -64,6 +66,8 @@ export async function appendCleanerOnboardingRow(
           submission.contactNumber,
           submission.city,
           submission.postcode,
+          description,
+          services.join(", "),
         ],
       ],
     },
